@@ -18,11 +18,16 @@ int main(void)
     my_strlist_append_literal(builtin_commands, "exit");
     while (shell_state)
     {
-        printf("shell_HX: \n$ ");
+        printf("$ > ");
         MyString user_input = read_line();
         MyStringList *list = my_splitter(user_input.string_proper, ' ');
         MyTokenList *token_list = my_tokenize_this(list, builtin_commands);
         my_execute(token_list);
+        my_destroy_string(&user_input);
+        free(list);
+        free(token_list);
     }
+    free(builtin_commands);
+
     return EXIT_SUCCESS;
 }

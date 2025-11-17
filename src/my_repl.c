@@ -29,7 +29,10 @@ u8 my_builtin_execute(MyString *command, MyStringList *args)
         }
         else
         {
-            chdir(args[0].body->string_proper);
+            if (chdir(args[0].body->string_proper) == -1)
+            {
+                printf("%s was not found.\n", args[0].body->string_proper);
+            };
         }
     }
     if (my_compare_literals(command->string_proper, "help"))
@@ -106,7 +109,10 @@ u8 my_execute(MyTokenList *token_list)
         pid = fork();
         if (pid == 0)
         {
-            execvp(args[0], args);
+            if (execvp(args[0], args) == -1)
+            {
+                printf("%s was not found.\n", args[0]);
+            };
         }
         else
         {

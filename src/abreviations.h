@@ -15,8 +15,4 @@ typedef uint64_t u64;
 typedef float f32;
 typedef double f64;
 
-#ifdef __GNUC__
-typedef _Float16 f16;
-#endif
-
 #endif
