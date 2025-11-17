@@ -43,7 +43,7 @@ int main(void)
 {
     while (1)
     {
-        printf("$ > ");
+        printf("shell_HX: \n$ ");
         MyString user_input = read_line();
         MyStringList *list = my_splitter(user_input.string_proper, ' ');
         MyTokenList *token_list = my_tokenize_this(list, NULL);
