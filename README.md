@@ -29,4 +29,9 @@ This is Ai generated, code is not, but this is :
 4. **You’re all set!**
    The program should now be running.
 
+# Stuff I Want to Add / Fix When Coming Back
+
+- Be more verbose in error handling
+- Add piping and redirecting
+- Add signal responses
 
