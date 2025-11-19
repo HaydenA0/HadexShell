@@ -1,12 +1,15 @@
 
 
+Code : Human Made
+README : AI generated under my guidance
 
+--- 
 # Hadex Shell
 
 ### 0. Demonstration
 
 <div style="text-align: center;">
- <img src="./images/inaction.png" alt="No stress :)" width="500" />
+ <img src="./images/inaction.png" alt="No stress :)" width="800" />
 </div>
 
 
